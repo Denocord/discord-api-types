@@ -1,0 +1,54 @@
+{
+  "name": "@klasa/util",
+  "version": "0.0.1",
+  "description": "some util thing.",
+  "main": "dist/index.js",
+  "scripts": {
+    "prepublishOnly": "yarn build",
+    "build": "tsc",
+    "test": "ava",
+    "test:lint": "eslint --ext ts src test",
+    "test:coverage": "npx nyc check-coverage --lines 90 --functions 90 --branches 90",
+    "coverage": "npx nyc --require ts-node/register --require source-map-support/register npm test",
+    "coverage:report": "npx nyc report --reporter=html",
+    "lint": "eslint --fix --ext ts src test",
+    "docs": "typedoc"
+  },
+  "keywords": [],
+  "author": "dirigeants",
+  "license": "MIT",
+  "engines": {
+    "node": ">=10.1.0"
+  },
+  "devDependencies": {
+    "@istanbuljs/nyc-config-typescript": "^1.0.1",
+    "@types/node": "^13.9.0",
+    "@typescript-eslint/eslint-plugin": "^2.22.0",
+    "@typescript-eslint/parser": "^2.22.0",
+    "ava": "^3.5.0",
+    "eslint": "^6.8.0",
+    "eslint-config-klasa": "dirigeants/klasa-lint",
+    "nyc": "^15.0.0",
+    "source-map-support": "^0.5.13",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.8.3",
+    "typedoc": "^0.17.0-3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dirigeants/util"
+  },
+  "ava": {
+    "extensions": [
+      "ts"
+    ],
+    "files": [
+      "test/**/*.ts",
+      "!test/lib"
+    ],
+    "require": [
+      "ts-node/register",
+      "source-map-support/register"
+    ]
+  }
+}

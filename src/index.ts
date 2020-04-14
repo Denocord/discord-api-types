@@ -176,8 +176,8 @@ export interface APIConnectionData {
 	id: string;
 	name: string;
 	type: string;
-	revoked: boolean;
-	integrations: APIIntegrationData[];
+	revoked?: boolean;
+	integrations?: APIIntegrationData[];
 	verified: boolean;
 	friend_sync: boolean;
 	show_activity: boolean;
@@ -431,22 +431,16 @@ export interface APIInviteMetadataData {
 // #region Members
 
 /**
- * Not Documented, but Partial packets only exclude the user property
+ * https://discordapp.com/developers/docs/resources/guild#guild-member-object-guild-member-structure
  */
-export interface APIGuildMemberPartial {
-	nick?: string;
+export interface APIGuildMemberData {
+	user?: APIUserData;
+	nick: string | null;
 	roles: string[];
 	joined_at: string;
 	premium_since?: string | null;
 	deaf: boolean;
 	mute: boolean;
-}
-
-/**
- * https://discordapp.com/developers/docs/resources/guild#guild-member-object-guild-member-structure
- */
-export interface APIGuildMemberData extends APIGuildMemberPartial {
-	user: APIUserData;
 }
 
 // #endregion Members
@@ -461,13 +455,13 @@ export interface APIMessageData {
 	channel_id: string;
 	guild_id?: string;
 	author: APIUserData;
-	member?: APIGuildMemberPartial;
+	member?: APIGuildMemberData;
 	content: string;
 	timestamp: string;
 	edited_timestamp: string | null;
 	tts: boolean;
 	mention_everyone: boolean;
-	mentions: (APIUserData | (APIUserData & APIGuildMemberPartial))[];
+	mentions: (APIUserData | (APIUserData & APIGuildMemberData))[];
 	mention_roles: string[];
 	mention_channels: APIMessageMentionChannelData[];
 	attachments: APIMessageAttachmentData[];
@@ -620,9 +614,10 @@ export interface APIUserData {
 	mfa_enabled?: boolean;
 	locale?: string;
 	verified?: boolean;
-	email?: string;
+	email?: string | null;
 	flags?: APIUserFlags;
 	premium_type?: PremiumType;
+	public_flags?: APIUserFlags;
 }
 
 // #endregion Users
@@ -909,8 +904,8 @@ export const enum AuditLogEvent {
  * https://discordapp.com/developers/docs/resources/user#user-object-user-flags
  */
 export const enum APIUserFlags {
-	Employee = 1 << 0,
-	Partner = 1 << 1,
+	DiscordEmployee = 1 << 0,
+	DiscordPartner = 1 << 1,
 	HypeSquadEvents = 1 << 2,
 	BugHunterLevel1 = 1 << 3,
 	HypeSquadHouseBravery = 1 << 6,
@@ -919,7 +914,9 @@ export const enum APIUserFlags {
 	EarlySupporter = 1 << 9,
 	TeamUser = 1 << 10,
 	System = 1 << 12,
-	BugHunterTier2 = 1 << 14
+	BugHunterTier2 = 1 << 14,
+	VerifiedBot = 1 << 16,
+	VerifiedBotDeveloper = 1 << 17
 }
 
 /**

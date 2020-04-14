@@ -410,7 +410,7 @@ export interface APIInviteData {
 	channel: APIChannelPartial;
 	inviter?: APIUserData;
 	target_user?: APIUserData;
-	target_user_type?: number;
+	target_user_type?: InviteTargetUserType;
 	approximate_presence_count?: number;
 	approximate_member_count?: number;
 }
@@ -933,6 +933,13 @@ export const enum PremiumType {
 export const enum WebhookType {
 	Incoming = 1,
 	ChannelFollower
+}
+
+/**
+ * https://discordapp.com/developers/docs/resources/invite#invite-object-target-user-type
+ */
+export const enum InviteTargetUserType {
+	Stream = 1
 }
 
 // #endregion Enums

@@ -6,7 +6,7 @@
 // #region Activity
 
 /**
- * https://discordapp.com/developers/docs/topics/gateway#activity-object
+ * https://discord.com/developers/docs/topics/gateway#activity-object
  */
 export interface APIActivityData {
 	name: string;
@@ -26,7 +26,7 @@ export interface APIActivityData {
 }
 
 /**
- * https://discordapp.com/developers/docs/topics/gateway#activity-object-activity-timestamps
+ * https://discord.com/developers/docs/topics/gateway#activity-object-activity-timestamps
  */
 export interface APIActivityDataTimestamps {
 	start?: number;
@@ -34,7 +34,7 @@ export interface APIActivityDataTimestamps {
 }
 
 /**
- * https://discordapp.com/developers/docs/topics/gateway#activity-object-activity-emoji
+ * https://discord.com/developers/docs/topics/gateway#activity-object-activity-emoji
  */
 export interface APIActivityDataEmoji {
 	name: string;
@@ -43,7 +43,7 @@ export interface APIActivityDataEmoji {
 }
 
 /**
- * https://discordapp.com/developers/docs/topics/gateway#activity-object-activity-party
+ * https://discord.com/developers/docs/topics/gateway#activity-object-activity-party
  */
 export interface APIActivityDataParty {
 	id?: string;
@@ -51,7 +51,7 @@ export interface APIActivityDataParty {
 }
 
 /**
- * https://discordapp.com/developers/docs/topics/gateway#activity-object-activity-assets
+ * https://discord.com/developers/docs/topics/gateway#activity-object-activity-assets
  */
 export interface APIActivityDataAssets {
 	large_image?: string;
@@ -61,7 +61,7 @@ export interface APIActivityDataAssets {
 }
 
 /**
- * https://discordapp.com/developers/docs/topics/gateway#activity-object-activity-secrets
+ * https://discord.com/developers/docs/topics/gateway#activity-object-activity-secrets
  */
 export interface APIActivityDataSecrets {
 	join?: string;
@@ -74,7 +74,7 @@ export interface APIActivityDataSecrets {
 // #region Audit Logs
 
 /**
- * https://discordapp.com/developers/docs/resources/audit-log#audit-log-object
+ * https://discord.com/developers/docs/resources/audit-log#audit-log-object
  */
 export interface APIAuditLogData {
 	webhooks: APIWebhookData[];
@@ -84,7 +84,7 @@ export interface APIAuditLogData {
 }
 
 /**
- * https://discordapp.com/developers/docs/resources/audit-log#audit-log-entry-object
+ * https://discord.com/developers/docs/resources/audit-log#audit-log-entry-object
  */
 export interface APIAuditLogEntryData {
 	target_id: string | null;
@@ -97,7 +97,7 @@ export interface APIAuditLogEntryData {
 }
 
 /**
- * https://discordapp.com/developers/docs/resources/audit-log#audit-log-change-object-audit-log-change-structure
+ * https://discord.com/developers/docs/resources/audit-log#audit-log-change-object-audit-log-change-structure
  */
 export interface APIAuditLogChangeData {
 	new_value?: unknown;
@@ -106,7 +106,7 @@ export interface APIAuditLogChangeData {
 }
 
 /**
- * https://discordapp.com/developers/docs/resources/audit-log#audit-log-entry-object-optional-audit-entry-info
+ * https://discord.com/developers/docs/resources/audit-log#audit-log-entry-object-optional-audit-entry-info
  */
 export interface APIAuditLogOptionsData {
 	delete_member_days?: string;
@@ -124,7 +124,7 @@ export interface APIAuditLogOptionsData {
 // #region Bans
 
 /**
- * https://discordapp.com/developers/docs/resources/guild#ban-object-ban-structure
+ * https://discord.com/developers/docs/resources/guild#ban-object-ban-structure
  */
 export interface APIBanData {
 	reason: string | null;
@@ -145,7 +145,7 @@ export interface APIChannelPartial {
 }
 
 /**
- * https://discordapp.com/developers/docs/resources/channel#channel-object
+ * https://discord.com/developers/docs/resources/channel#channel-object
  */
 export interface APIChannelData extends APIChannelPartial {
 	guild_id?: string;
@@ -170,7 +170,7 @@ export interface APIChannelData extends APIChannelPartial {
 // #region Connections
 
 /**
- * https://discordapp.com/developers/docs/resources/user#connection-object-connection-structure
+ * https://discord.com/developers/docs/resources/user#connection-object-connection-structure
  */
 export interface APIConnectionData {
 	id: string;
@@ -189,7 +189,7 @@ export interface APIConnectionData {
 // #region Embeds
 
 /**
- * https://discordapp.com/developers/docs/resources/channel#embed-object
+ * https://discord.com/developers/docs/resources/channel#embed-object
  */
 export interface APIEmbedData {
 	title?: string;
@@ -208,7 +208,7 @@ export interface APIEmbedData {
 }
 
 /**
- * https://discordapp.com/developers/docs/resources/channel#embed-object-embed-footer-structure
+ * https://discord.com/developers/docs/resources/channel#embed-object-embed-footer-structure
  */
 export interface APIEmbedFooterData {
 	text: string;
@@ -217,7 +217,7 @@ export interface APIEmbedFooterData {
 }
 
 /**
- * https://discordapp.com/developers/docs/resources/channel#embed-object-embed-image-structure
+ * https://discord.com/developers/docs/resources/channel#embed-object-embed-image-structure
  */
 export interface APIEmbedImageData {
 	url?: string;
@@ -227,7 +227,7 @@ export interface APIEmbedImageData {
 }
 
 /**
- * https://discordapp.com/developers/docs/resources/channel#embed-object-embed-thumbnail-structure
+ * https://discord.com/developers/docs/resources/channel#embed-object-embed-thumbnail-structure
  */
 export interface APIEmbedThumbnailData {
 	url?: string;
@@ -237,7 +237,7 @@ export interface APIEmbedThumbnailData {
 }
 
 /**
- * https://discordapp.com/developers/docs/resources/channel#embed-object-embed-video-structure
+ * https://discord.com/developers/docs/resources/channel#embed-object-embed-video-structure
  */
 export interface APIEmbedVideoData {
 	url?: string;
@@ -246,7 +246,7 @@ export interface APIEmbedVideoData {
 }
 
 /**
- * https://discordapp.com/developers/docs/resources/channel#embed-object-embed-provider-structure
+ * https://discord.com/developers/docs/resources/channel#embed-object-embed-provider-structure
  */
 export interface APIEmbedProviderData {
 	name?: string;
@@ -254,7 +254,7 @@ export interface APIEmbedProviderData {
 }
 
 /**
- * https://discordapp.com/developers/docs/resources/channel#embed-object-embed-author-structure
+ * https://discord.com/developers/docs/resources/channel#embed-object-embed-author-structure
  */
 export interface APIEmbedAuthorData {
 	name?: string;
@@ -264,7 +264,7 @@ export interface APIEmbedAuthorData {
 }
 
 /**
- * https://discordapp.com/developers/docs/resources/channel#embed-object-embed-field-structure
+ * https://discord.com/developers/docs/resources/channel#embed-object-embed-field-structure
  */
 export interface APIEmbedFieldData {
 	name: string;
@@ -286,7 +286,7 @@ export interface APIEmojiPartial {
 }
 
 /**
- * https://discordapp.com/developers/docs/resources/emoji#emoji-object-emoji-structure
+ * https://discord.com/developers/docs/resources/emoji#emoji-object-emoji-structure
  */
 export interface APIEmojiData extends APIEmojiPartial {
 	roles?: string[];
@@ -316,7 +316,7 @@ export interface APIGuildPartial {
 }
 
 /**
- * https://discordapp.com/developers/docs/resources/guild#guild-object-guild-structure
+ * https://discord.com/developers/docs/resources/guild#guild-object-guild-structure
  */
 export interface APIGuildData extends APIGuildPartial {
 	discovery_splash: string | null;
@@ -361,7 +361,7 @@ export interface APIGuildData extends APIGuildPartial {
 }
 
 /**
- * https://discordapp.com/developers/docs/resources/guild#guild-embed-object-guild-embed-structure
+ * https://discord.com/developers/docs/resources/guild#guild-embed-object-guild-embed-structure
  */
 export interface APIGuildEmbedData {
 	enabled: boolean;
@@ -373,7 +373,7 @@ export interface APIGuildEmbedData {
 // #region Integrations
 
 /**
- * https://discordapp.com/developers/docs/resources/guild#integration-object-integration-structure
+ * https://discord.com/developers/docs/resources/guild#integration-object-integration-structure
  */
 export interface APIIntegrationData {
 	id: string;
@@ -390,7 +390,7 @@ export interface APIIntegrationData {
 }
 
 /**
- * https://discordapp.com/developers/docs/resources/guild#integration-account-object
+ * https://discord.com/developers/docs/resources/guild#integration-account-object
  */
 export interface APIIntegrationAccountData {
 	id: string;
@@ -402,7 +402,7 @@ export interface APIIntegrationAccountData {
 // #region Invites
 
 /**
- * https://discordapp.com/developers/docs/resources/invite#invite-object-invite-structure
+ * https://discord.com/developers/docs/resources/invite#invite-object-invite-structure
  */
 export interface APIInviteData {
 	code: string;
@@ -416,7 +416,7 @@ export interface APIInviteData {
 }
 
 /**
- * https://discordapp.com/developers/docs/resources/invite#invite-metadata-object-invite-metadata-structure
+ * https://discord.com/developers/docs/resources/invite#invite-metadata-object-invite-metadata-structure
  */
 export interface APIInviteMetadataData {
 	uses: number;
@@ -431,7 +431,7 @@ export interface APIInviteMetadataData {
 // #region Members
 
 /**
- * https://discordapp.com/developers/docs/resources/guild#guild-member-object-guild-member-structure
+ * https://discord.com/developers/docs/resources/guild#guild-member-object-guild-member-structure
  */
 export interface APIGuildMemberData {
 	user?: APIUserData;
@@ -448,7 +448,7 @@ export interface APIGuildMemberData {
 // #region Messages
 
 /**
- * https://discordapp.com/developers/docs/resources/channel#message-object-message-structure
+ * https://discord.com/developers/docs/resources/channel#message-object-message-structure
  */
 export interface APIMessageData {
 	id: string;
@@ -478,7 +478,7 @@ export interface APIMessageData {
 }
 
 /**
- * https://discordapp.com/developers/docs/resources/channel#attachment-object
+ * https://discord.com/developers/docs/resources/channel#attachment-object
  */
 export interface APIMessageAttachmentData {
 	id: string;
@@ -491,7 +491,7 @@ export interface APIMessageAttachmentData {
 }
 
 /**
- * https://discordapp.com/developers/docs/resources/channel#message-object-message-activity-structure
+ * https://discord.com/developers/docs/resources/channel#message-object-message-activity-structure
  */
 export interface APIMessageActivityData {
 	type: MessageActivityType;
@@ -499,7 +499,7 @@ export interface APIMessageActivityData {
 }
 
 /**
- * https://discordapp.com/developers/docs/resources/channel#message-object-message-application-structure
+ * https://discord.com/developers/docs/resources/channel#message-object-message-application-structure
  */
 export interface APIMessageApplicationData {
 	id: string;
@@ -510,7 +510,7 @@ export interface APIMessageApplicationData {
 }
 
 /**
- * https://discordapp.com/developers/docs/resources/channel#message-object-message-reference-structure
+ * https://discord.com/developers/docs/resources/channel#message-object-message-reference-structure
  */
 export interface APIMessageReferenceData {
 	message_id?: string;
@@ -519,7 +519,7 @@ export interface APIMessageReferenceData {
 }
 
 /**
- * https://discordapp.com/developers/docs/resources/channel#channel-mention-object
+ * https://discord.com/developers/docs/resources/channel#channel-mention-object
  */
 export interface APIMessageMentionChannelData {
 	id: string;
@@ -533,7 +533,7 @@ export interface APIMessageMentionChannelData {
 // #region PermissionOverwrites
 
 /**
- * https://discordapp.com/developers/docs/resources/channel#overwrite-object
+ * https://discord.com/developers/docs/resources/channel#overwrite-object
  */
 export interface APIOverwriteData {
 	id: string;
@@ -547,7 +547,7 @@ export interface APIOverwriteData {
 // #region Presence
 
 /**
- * https://discordapp.com/developers/docs/topics/gateway#presence-update
+ * https://discord.com/developers/docs/topics/gateway#presence-update
  */
 export interface APIPresenceUpdateData {
 	user: APIUserData;
@@ -562,7 +562,7 @@ export interface APIPresenceUpdateData {
 }
 
 /**
- * https://discordapp.com/developers/docs/topics/gateway#client-status-object
+ * https://discord.com/developers/docs/topics/gateway#client-status-object
  */
 export type APIClientStatusData = Partial<Record<'desktop' | 'mobile' | 'web', PresenceUpdateStatus>>
 
@@ -571,7 +571,7 @@ export type APIClientStatusData = Partial<Record<'desktop' | 'mobile' | 'web', P
 // #region Reactions
 
 /**
- * https://discordapp.com/developers/docs/resources/channel#reaction-object
+ * https://discord.com/developers/docs/resources/channel#reaction-object
  */
 export interface APIReactionData {
 	count: number;
@@ -584,7 +584,7 @@ export interface APIReactionData {
 // #region Roles
 
 /**
- * https://discordapp.com/developers/docs/topics/permissions#role-object
+ * https://discord.com/developers/docs/topics/permissions#role-object
  */
 export interface APIRoleData {
 	id: string;
@@ -602,7 +602,7 @@ export interface APIRoleData {
 // #region Users
 
 /**
- * https://discordapp.com/developers/docs/resources/user#user-object
+ * https://discord.com/developers/docs/resources/user#user-object
  */
 export interface APIUserData {
 	id: string;
@@ -640,7 +640,7 @@ export interface APIVoiceStatePartial {
 }
 
 /**
- * https://discordapp.com/developers/docs/resources/voice#voice-state-object
+ * https://discord.com/developers/docs/resources/voice#voice-state-object
  */
 export interface APIVoiceStateData extends APIVoiceStatePartial {
 	guild_id?: string;
@@ -648,7 +648,7 @@ export interface APIVoiceStateData extends APIVoiceStatePartial {
 }
 
 /**
- * https://discordapp.com/developers/docs/resources/voice#voice-region-object-voice-region-structure
+ * https://discord.com/developers/docs/resources/voice#voice-region-object-voice-region-structure
  */
 export interface APIVoiceRegionData {
 	id: string;
@@ -664,7 +664,7 @@ export interface APIVoiceRegionData {
 // #region Webhooks
 
 /**
- * https://discordapp.com/developers/docs/resources/webhook#webhook-object-webhook-structure
+ * https://discord.com/developers/docs/resources/webhook#webhook-object-webhook-structure
  */
 export interface APIWebhookData {
 	id: string;
@@ -682,14 +682,14 @@ export interface APIWebhookData {
 // #region Gateway
 
 /**
- * https://discordapp.com/developers/docs/topics/gateway#get-gateway
+ * https://discord.com/developers/docs/topics/gateway#get-gateway
  */
 export interface APIGatewayData {
 	url: string;
 }
 
 /**
- * https://discordapp.com/developers/docs/topics/gateway#get-gateway-bot
+ * https://discord.com/developers/docs/topics/gateway#get-gateway-bot
  */
 export interface APIGatewayBotData extends APIGatewayData {
 	shards: number;
@@ -709,7 +709,7 @@ export interface APISessionStartLimit {
 // #region Enums
 
 /**
- * https://discordapp.com/developers/docs/topics/gateway#activity-object-activity-flags
+ * https://discord.com/developers/docs/topics/gateway#activity-object-activity-flags
  */
 export const enum ActivityFlags {
 	Instance = 1 << 0,
@@ -721,7 +721,7 @@ export const enum ActivityFlags {
 }
 
 /**
- * https://discordapp.com/developers/docs/resources/user#connection-object-visibility-types
+ * https://discord.com/developers/docs/resources/user#connection-object-visibility-types
  */
 export const enum ConnectionVisibility {
 	None,
@@ -729,7 +729,7 @@ export const enum ConnectionVisibility {
 }
 
 /**
- * https://discordapp.com/developers/docs/resources/channel#message-object-message-types
+ * https://discord.com/developers/docs/resources/channel#message-object-message-types
  */
 export const enum MessageType {
 	Default,
@@ -751,7 +751,7 @@ export const enum MessageType {
 }
 
 /**
- * https://discordapp.com/developers/docs/resources/channel#message-object-message-activity-types
+ * https://discord.com/developers/docs/resources/channel#message-object-message-activity-types
  */
 export const enum MessageActivityType {
 	Join = 1,
@@ -761,7 +761,7 @@ export const enum MessageActivityType {
 }
 
 /**
- * https://discordapp.com/developers/docs/resources/channel#message-object-message-flags
+ * https://discord.com/developers/docs/resources/channel#message-object-message-flags
  */
 export const enum APIMessageFlags {
 	Crossposted = 1 << 0,
@@ -772,7 +772,7 @@ export const enum APIMessageFlags {
 }
 
 /**
- * https://discordapp.com/developers/docs/resources/guild#guild-object-default-message-notification-level
+ * https://discord.com/developers/docs/resources/guild#guild-object-default-message-notification-level
  */
 export const enum GuildDefaultMessageNotifications {
 	AllMessages,
@@ -780,7 +780,7 @@ export const enum GuildDefaultMessageNotifications {
 }
 
 /**
- * https://discordapp.com/developers/docs/resources/guild#guild-object-explicit-content-filter-level
+ * https://discord.com/developers/docs/resources/guild#guild-object-explicit-content-filter-level
  */
 export const enum GuildExplicitContentFilterLevel {
 	Disabled,
@@ -789,7 +789,7 @@ export const enum GuildExplicitContentFilterLevel {
 }
 
 /**
- * https://discordapp.com/developers/docs/resources/guild#guild-object-mfa-level
+ * https://discord.com/developers/docs/resources/guild#guild-object-mfa-level
  */
 export const enum GuildMFALevel {
 	None,
@@ -797,7 +797,7 @@ export const enum GuildMFALevel {
 }
 
 /**
- * https://discordapp.com/developers/docs/resources/guild#guild-object-verification-level
+ * https://discord.com/developers/docs/resources/guild#guild-object-verification-level
  */
 export const enum GuildVerificationLevel {
 	None,
@@ -808,7 +808,7 @@ export const enum GuildVerificationLevel {
 }
 
 /**
- * https://discordapp.com/developers/docs/resources/guild#guild-object-system-channel-flags
+ * https://discord.com/developers/docs/resources/guild#guild-object-system-channel-flags
  */
 export const enum GuildSystemChannelFlags {
 	SuppressJoinNotifications = 1 << 0,
@@ -816,7 +816,7 @@ export const enum GuildSystemChannelFlags {
 }
 
 /**
- * https://discordapp.com/developers/docs/resources/guild#guild-object-premium-tier
+ * https://discord.com/developers/docs/resources/guild#guild-object-premium-tier
  */
 export const enum GuildPremiumTier {
 	None,
@@ -826,7 +826,7 @@ export const enum GuildPremiumTier {
 }
 
 /**
- * https://discordapp.com/developers/docs/resources/channel#channel-object-channel-types
+ * https://discord.com/developers/docs/resources/channel#channel-object-channel-types
  */
 export const enum ChannelType {
 	GuildText,
@@ -840,7 +840,7 @@ export const enum ChannelType {
 }
 
 /**
- * https://discordapp.com/developers/docs/topics/gateway#activity-object-activity-types
+ * https://discord.com/developers/docs/topics/gateway#activity-object-activity-types
  */
 export const enum PresenceUpdateStatus {
 	Idle = 'idle',
@@ -850,7 +850,7 @@ export const enum PresenceUpdateStatus {
 }
 
 /**
- * https://discordapp.com/developers/docs/topics/gateway#activity-object-activity-types
+ * https://discord.com/developers/docs/topics/gateway#activity-object-activity-types
  */
 export const enum ActivityType {
 	Game,
@@ -860,7 +860,7 @@ export const enum ActivityType {
 }
 
 /**
- * https://discordapp.com/developers/docs/resources/audit-log#audit-log-entry-object-audit-log-events
+ * https://discord.com/developers/docs/resources/audit-log#audit-log-entry-object-audit-log-events
  */
 export const enum AuditLogEvent {
 	GuildUpdate = 1,
@@ -901,7 +901,7 @@ export const enum AuditLogEvent {
 }
 
 /**
- * https://discordapp.com/developers/docs/resources/user#user-object-user-flags
+ * https://discord.com/developers/docs/resources/user#user-object-user-flags
  */
 export const enum APIUserFlags {
 	DiscordEmployee = 1 << 0,
@@ -920,7 +920,7 @@ export const enum APIUserFlags {
 }
 
 /**
- * https://discordapp.com/developers/docs/resources/user#user-object-premium-types
+ * https://discord.com/developers/docs/resources/user#user-object-premium-types
  */
 export const enum PremiumType {
 	NitroClassic = 1,
@@ -928,7 +928,7 @@ export const enum PremiumType {
 }
 
 /**
- * https://discordapp.com/developers/docs/resources/webhook#webhook-object-webhook-types
+ * https://discord.com/developers/docs/resources/webhook#webhook-object-webhook-types
  */
 export const enum WebhookType {
 	Incoming = 1,
@@ -936,7 +936,7 @@ export const enum WebhookType {
 }
 
 /**
- * https://discordapp.com/developers/docs/resources/invite#invite-object-target-user-type
+ * https://discord.com/developers/docs/resources/invite#invite-object-target-user-type
  */
 export const enum InviteTargetUserType {
 	Stream = 1

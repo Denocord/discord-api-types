@@ -333,7 +333,7 @@ export interface APIGuildData extends APIGuildPartial {
 	explicit_content_filter: GuildExplicitContentFilterLevel;
 	roles: APIRoleData[];
 	emojis: APIEmojiData[];
-	features: string[];
+	features: GuildFeatures[];
 	mfa_level: GuildMFALevel;
 	application_id: string | null;
 	widget_enabled?: boolean;
@@ -358,6 +358,8 @@ export interface APIGuildData extends APIGuildPartial {
 	premium_subscription_count?: number;
 	preferred_locale: string;
 	public_updates_channel_id: string | null;
+	approximate_member_count?: number;
+	approximate_presence_status?: number;
 }
 
 /**
@@ -788,6 +790,22 @@ export const enum GuildExplicitContentFilterLevel {
 	AllMembers
 }
 
+export const enum GuildFeatures {
+	InviteSplash = 'INVITE_SPLASH',
+	VipRegion = 'VIP_REGIONS',
+	VanityUrl = 'VANITY_URL',
+	Verified = 'VERIFIED',
+	Partnered = 'PARTNERED',
+	Public = 'PUBLIC',
+	Commerce = 'COMMERCE',
+	News = 'NEWS',
+	Discoverable = 'DISCOVERABLE',
+	Featurable = 'FEATURABLE',
+	AnimatedIcon = 'ANIMATED_ICON',
+	Banner = 'BANNER',
+	PublicDisabled = 'PUBLIC_DISABLED',
+	WelcomeScreenEnabled = 'WELCOME_SCREEN_ENABLED'
+}
 /**
  * https://discord.com/developers/docs/resources/guild#guild-object-mfa-level
  */

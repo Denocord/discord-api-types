@@ -337,7 +337,7 @@ export interface APIGuildData extends APIGuildPartial {
 	mfa_level: GuildMFALevel;
 	application_id: string | null;
 	widget_enabled?: boolean;
-	widget_channel_id?: boolean;
+	widget_channel_id?: string;
 	system_channel_id: string | null;
 	system_channel_flags: GuildSystemChannelFlags;
 	rules_channel_id: string | null;

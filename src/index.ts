@@ -707,6 +707,51 @@ export interface APISessionStartLimit {
 
 // #endregion Gateway
 
+// #region Oauth and Teams
+
+/**
+ * https://discord.com/developers/docs/topics/oauth2#get-current-application-information-response-structure
+ */
+export interface APIOauthData {
+	id: string;
+	name: string;
+	icon?: string;
+	description: string;
+	rpc_origins?: string[];
+	bot_public: boolean;
+	bot_require_code_grant: boolean;
+	owner: APIUserData;
+	summary: string;
+	verify_key: string;
+	team?: APITeamData;
+	guild_id?: string;
+	primary_sku_id?: string;
+	slug?: string;
+	cover_image?: string;
+}
+
+/**
+ * https://discord.com/developers/docs/topics/teams#data-models-team-object
+ */
+export interface APITeamData {
+	icon?: string;
+	id: string;
+	members: APITeamMember[];
+	owner_user_id: string;
+}
+
+/**
+ * https://discord.com/developers/docs/topics/teams#data-models-team-members-object
+ */
+export interface APITeamMember {
+	membership_state: TeamMembershipState;
+	permissions: string[];
+	team_id: string;
+	user: APIUserData;
+}
+
+// #endregion
+
 // #endregion API Payloads
 
 // #region Enums
@@ -959,6 +1004,14 @@ export const enum WebhookType {
  */
 export const enum InviteTargetUserType {
 	Stream = 1
+}
+
+/**
+ * https://discord.com/developers/docs/topics/teams#data-models-membership-state-enum
+ */
+export const enum TeamMembershipState {
+	Invited = 1,
+	Accepted
 }
 
 // #endregion Enums

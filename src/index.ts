@@ -293,6 +293,7 @@ export interface APIEmojiData extends APIEmojiPartial {
 	user?: APIUserData;
 	require_colons?: boolean;
 	managed?: boolean;
+	available?: boolean;
 }
 
 // #endregion Emojis

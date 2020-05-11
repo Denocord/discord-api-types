@@ -444,6 +444,7 @@ export interface APIGuildMemberData {
 	premium_since?: string | null;
 	deaf: boolean;
 	mute: boolean;
+	hoisted_role?: string | null;
 }
 
 // #endregion Members
@@ -464,7 +465,7 @@ export interface APIMessageData {
 	edited_timestamp: string | null;
 	tts: boolean;
 	mention_everyone: boolean;
-	mentions: (APIUserData | (APIUserData & APIGuildMemberData))[];
+	mentions: APIMessageMentionData[];
 	mention_roles: string[];
 	mention_channels: APIMessageMentionChannelData[];
 	attachments: APIMessageAttachmentData[];
@@ -793,7 +794,7 @@ export const enum MessageType {
 	UserPremiumGuildSubscriptionTier2,
 	UserPremiumGuildSubscriptionTier3,
 	ChannelFollowAdd,
-	__UNDOCUMENTED__TYPE__13,
+	__UNUSED_TYPE__,
 	GuildDiscoveryDisqualified,
 	GuildDiscoveryRequalified
 }
@@ -1018,6 +1019,8 @@ export const enum TeamMembershipState {
 
 // #region Types
 export type EmbedType = 'link' | 'rich' | 'image' | 'video' | 'gifv' | 'article' | 'application_news';
+
+export type APIMessageMentionData = APIUserData & { member?: Omit<APIGuildMemberData, 'user'> };
 // #endregion Types
 
 /* eslint-enable no-bitwise */

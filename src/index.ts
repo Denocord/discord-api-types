@@ -445,7 +445,6 @@ export interface APIGuildMemberData {
 	premium_since?: string | null;
 	deaf: boolean;
 	mute: boolean;
-	hoisted_role?: string | null;
 }
 
 // #endregion Members

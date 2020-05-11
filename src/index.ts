@@ -361,6 +361,7 @@ export interface APIGuildData extends APIGuildPartial {
 	public_updates_channel_id: string | null;
 	approximate_member_count?: number;
 	approximate_presence_status?: number;
+	max_video_channel_users?: number;
 }
 
 /**

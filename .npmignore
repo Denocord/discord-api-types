@@ -1,4 +1,5 @@
 # .npmignore
+.github/
 .get/
 node_modules/
 test/
@@ -19,5 +20,4 @@ coverage/
 azure-pipelines.yml
 test-results.xml
 .nycrc.json
-typedoc.json
-.github/
+.typedoc.json

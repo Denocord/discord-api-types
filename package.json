@@ -1,6 +1,6 @@
 {
   "name": "@klasa/dapi-types",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Discord API typings that are kept up to date for use in bot library creation.",
   "main": "dist/index.js",
   "scripts": {

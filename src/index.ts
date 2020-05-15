@@ -552,15 +552,19 @@ export interface APIOverwriteData {
 
 /**
  * https://discord.com/developers/docs/topics/gateway#presence-update
+ *
+ * The user object within this event can be partial, the only field which must be sent is the **id** field, everything else is optional.
+ *
+ * Along with this limitation, no fields are required, and the types of the fields are not validated.
  */
 export interface APIPresenceUpdateData {
-	user: APIUserData;
-	roles: string[];
-	game: APIActivityData | null;
-	guild_id: string;
-	status: PresenceUpdateStatus;
-	activities: APIActivityData[];
-	client_status: APIClientStatusData;
+	user: { id: string } & Partial<APIUserData>;
+	roles?: string[];
+	game?: APIActivityData | null;
+	guild_id?: string;
+	status?: PresenceUpdateStatus;
+	activities?: APIActivityData[];
+	client_status?: APIClientStatusData;
 	premium_since?: string | null;
 	nick?: string | null;
 }
@@ -749,6 +753,15 @@ export interface APITeamMember {
 	permissions: string[];
 	team_id: string;
 	user: APIUserData;
+}
+
+// #endregion
+
+// #region Channel Following
+
+export interface APIChannelFollowResult {
+	channel_id: string;
+	webhook_id: string;
 }
 
 // #endregion

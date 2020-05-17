@@ -365,11 +365,23 @@ export interface APIGuildData extends APIGuildPartial {
 }
 
 /**
- * https://discord.com/developers/docs/resources/guild#guild-embed-object-guild-embed-structure
+ * https://discord.com/developers/docs/resources/guild#guild-widget-object
  */
-export interface APIGuildEmbedData {
+export interface APIGuildWidgetData {
 	enabled: boolean;
 	channel_id: string | null;
+}
+
+/**
+ * https://discord.com/developers/docs/resources/guild#guild-preview-object
+ */
+export interface APIGuildPreviewData extends Omit<APIGuildUnavailable, 'unavailable'> {
+	discovery_splash: string | null;
+	emojis: APIEmojiData[];
+	features: GuildFeatures[];
+	approximate_member_count: number;
+	approximate_presence_count: number;
+	description: string | null;
 }
 
 // #endregion Guilds
@@ -386,7 +398,8 @@ export interface APIIntegrationData {
 	enabled: boolean;
 	syncing: boolean;
 	role_id: string;
-	expire_behavior: number;
+	enable_emoticons?: boolean;
+	expire_behavior: IntegrationExpireBehavior;
 	expire_grace_period: number;
 	user: APIUserData;
 	account: APIIntegrationAccountData;
@@ -1026,6 +1039,14 @@ export const enum InviteTargetUserType {
 export const enum TeamMembershipState {
 	Invited = 1,
 	Accepted
+}
+
+/**
+ * https://discord.com/developers/docs/resources/guild#integration-object-integration-expire-behaviors
+ */
+export const enum IntegrationExpireBehavior {
+	RemoveRole,
+	Kick
 }
 
 // #endregion Enums

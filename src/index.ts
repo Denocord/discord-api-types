@@ -384,6 +384,24 @@ export interface APIGuildPreviewData extends Omit<APIGuildUnavailable, 'unavaila
 	description: string | null;
 }
 
+/**
+ * The vanity URL data.
+ * @see https://discord.com/developers/docs/resources/guild#get-guild-vanity-url-example-partial-invite-object
+ */
+export interface APIGuildVanityData {
+	/**
+	 * The code of this invite.
+	 * @example "discord"
+	 */
+	code: string;
+
+	/**
+	 * The amount of uses this invite has.
+	 * @example 42
+	 */
+	uses: number;
+}
+
 // #endregion Guilds
 
 // #region Integrations

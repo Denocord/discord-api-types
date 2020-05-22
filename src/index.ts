@@ -13,7 +13,7 @@ export interface APIActivityData {
 	type: ActivityType;
 	url?: string | null;
 	created_at: number;
-	timestamps?: APIActivityDataTimestamps[];
+	timestamps?: APIActivityDataTimestamp;
 	application_id?: string;
 	details?: string | null;
 	state?: string | null;
@@ -28,7 +28,7 @@ export interface APIActivityData {
 /**
  * https://discord.com/developers/docs/topics/gateway#activity-object-activity-timestamps
  */
-export interface APIActivityDataTimestamps {
+export interface APIActivityDataTimestamp {
 	start?: number;
 	end?: number;
 }

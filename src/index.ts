@@ -943,8 +943,7 @@ export const enum ChannelType {
 	GuildVoice,
 	GroupDM,
 	GuildCategory,
-	// According to Discords Dev Docs it's GUILD_NEWS, but according to the client it's Announcement Channels
-	GuildAnnouncement,
+	GuildNews,
 	GuildStore,
 }
 

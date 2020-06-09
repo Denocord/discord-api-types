@@ -675,6 +675,7 @@ export interface APIVoiceStatePartial {
 	self_deaf: boolean;
 	self_mute: boolean;
 	self_stream?: boolean;
+	self_video: boolean;
 	suppress: boolean;
 }
 

@@ -634,6 +634,17 @@ export interface APIRoleData {
 	permissions: number;
 	managed: boolean;
 	mentionable: boolean;
+	tags?: APIRoleTags;
+}
+
+/**
+ * https://github.com/discord/discord-api-docs/issues/1537#issuecomment-656432643
+ * TODO: Link to the API docs URL when it's pushed/merged
+ */
+export interface APIRoleTags {
+	bot?: string;
+	premium_subscriber?: null;
+	integration?: string;
 }
 
 // #endregion Roles

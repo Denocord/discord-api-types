@@ -6,4 +6,4 @@ A simple list of what changes between versions
 
 #### APIRoleTags
 
-- rename `bot` to `bot_id
+- rename `bot` to `bot_id`

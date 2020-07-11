@@ -642,7 +642,7 @@ export interface APIRoleData {
  * TODO: Link to the API docs URL when it's pushed/merged
  */
 export interface APIRoleTags {
-	bot?: string;
+	bot_id?: string;
 	premium_subscriber?: null;
 	integration?: string;
 }

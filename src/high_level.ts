@@ -20,7 +20,9 @@ export interface SnowflakeBase {
     [DATA_SYMBOL]: DataTypes;
 }
 
-export type Guild = lowLevel.APIGuildData & {
+type HighLevelWrap<O, N> = Omit<O, keyof N> & N;
+
+export type Guild = HighLevelWrap<lowLevel.APIGuildData, {
     roles: Map<string, Role>;
     voice_states: Map<string, lowLevel.APIVoiceStatePartial>;
     members: Map<string, GuildMember>;
@@ -28,7 +30,7 @@ export type Guild = lowLevel.APIGuildData & {
     presences: Map<string, lowLevel.APIPresenceUpdateData>;
 
     [DATA_SYMBOL]: DataTypes.GUILD;
-}
+}>;
 
 export interface Channel extends lowLevel.APIChannelData {
     recipients?: User[];

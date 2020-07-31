@@ -59,5 +59,18 @@ export interface Role extends lowLevel.APIRoleData {
 }
 
 export type MessageMention = User & { member?: Omit<GuildMember, "user"> };
+export interface MessageCreatePayload {
+    content?: string;
+    nonce?: string | number;
+    embed?: lowLevel.APIEmbedData;
+    allowed_mentions?: MessageAllowedMentions;
+    tts?: boolean;
+    files?: File[]
+}
+export interface MessageAllowedMentions {
+    parse?: ("users" | "roles" | "everyone")[];
+    roles?: string[];
+    users?: string[];
+}
 
 export * from "./index.ts";

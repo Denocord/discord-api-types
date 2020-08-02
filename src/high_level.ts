@@ -12,6 +12,7 @@ export enum DataTypes {
   CHANNEL,
   MEMBER,
   MESSAGE,
+  WEBHOOK,
   UNKNOWN,
 }
 
@@ -58,6 +59,12 @@ export interface Role extends lowLevel.APIRoleData {
     [DATA_SYMBOL]: DataTypes.ROLE;
 }
 
+export interface Webhook extends lowLevel.APIWebhookData {
+    user?: User;
+
+    [DATA_SYMBOL]: DataTypes.WEBHOOK;
+}
+
 export type MessageMention = User & { member?: Omit<GuildMember, "user"> };
 export interface MessageCreatePayload {
     content?: string;
@@ -65,12 +72,16 @@ export interface MessageCreatePayload {
     embed?: lowLevel.APIEmbedData;
     allowed_mentions?: MessageAllowedMentions;
     tts?: boolean;
-    files?: File[]
+    files?: File[];
 }
 export interface MessageAllowedMentions {
     parse?: ("users" | "roles" | "everyone")[];
     roles?: string[];
     users?: string[];
+}
+export interface WebhookCreatePayload {
+    name: string;
+    avatar: string | null;
 }
 
 export * from "./index.ts";

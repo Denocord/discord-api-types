@@ -67,7 +67,7 @@ export interface Webhook extends lowLevel.APIWebhookData {
 }
 
 export type MessageMention = User & { member?: Omit<GuildMember, 'user'> };
-export interface MessageCreatePayload extends lowLevelRest.MessageCreatePayload {
+export interface MessageCreatePayload extends lowLevelRest.CreateMessagePayload {
 	files?: File[];
 }
 export * from './index.ts';

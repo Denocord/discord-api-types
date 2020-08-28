@@ -71,3 +71,4 @@ export interface MessageCreatePayload extends lowLevelRest.CreateMessagePayload 
 	files?: File[];
 }
 export * from './index.ts';
+export * from './rest.ts';

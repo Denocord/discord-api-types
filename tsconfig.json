@@ -12,8 +12,6 @@
         "noUnusedLocals": true,
         "removeComments": false,
         "target": "esnext",
-
-        // Cross-compatibility with Node.js
         "paths": {
             "*.ts": ["*"]
         },

@@ -26,10 +26,10 @@ type HighLevelWrap<O, N> = Omit<O, keyof N> & N;
 
 export type Guild = HighLevelWrap<lowLevel.APIGuildData, {
 	roles: Map<string, Role>,
-	voice_states: Map<string, lowLevel.APIVoiceStatePartial>,
-	members: Map<string, GuildMember>,
-	channels: Map<string, Channel>,
-	presences: Map<string, lowLevel.APIPresenceUpdateData>,
+	voice_states?: Map<string, lowLevel.APIVoiceStatePartial>,
+	members?: Map<string, GuildMember>,
+	channels?: Map<string, Channel>,
+	presences?: Map<string, lowLevel.APIPresenceUpdateData>,
 
 	[DATA_SYMBOL]: DataTypes.GUILD
 }>;

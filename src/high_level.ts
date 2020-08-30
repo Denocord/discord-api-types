@@ -14,6 +14,7 @@ export enum DataTypes {
 	MEMBER,
 	MESSAGE,
 	WEBHOOK,
+    INVITE,
 	UNKNOWN,
 }
 
@@ -65,6 +66,13 @@ export interface Webhook extends lowLevel.APIWebhookData {
 
 	[DATA_SYMBOL]: DataTypes.WEBHOOK;
 }
+
+export type Invite = HighLevelWrap<lowLevel.APIInviteData, {
+    guild?: Pick<Guild, "id" | "name" | "icon" | "splash" | typeof DATA_SYMBOL>;
+    channel?: Pick<Channel, "id" | "type" | "name" | typeof DATA_SYMBOL>;
+    inviter?: User;
+    target_user?: User;
+}>;
 
 export type MessageMention = User & { member?: Omit<GuildMember, 'user'> };
 export interface MessageCreatePayload extends lowLevelRest.CreateMessagePayload {

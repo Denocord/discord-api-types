@@ -72,6 +72,8 @@ export type Invite = HighLevelWrap<lowLevel.APIInviteData, {
     channel?: Pick<Channel, "id" | "type" | "name" | typeof DATA_SYMBOL>;
     inviter?: User;
     target_user?: User;
+
+    [DATA_SYMBOL]: DataTypes.INVITE;
 }>;
 
 export type MessageMention = User & { member?: Omit<GuildMember, 'user'> };

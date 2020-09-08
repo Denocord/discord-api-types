@@ -48,6 +48,10 @@ export interface GroupDMAddRecipientPayload {
 	access_token: string;
 	nick: string;
 }
+
+export interface FollowNewsChannelPayload {
+    webhook_channel_id: string;
+}
 // #endregion Channels
 // #region Emoji
 export interface CreateEmojiPayload {

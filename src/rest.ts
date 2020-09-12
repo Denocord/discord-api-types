@@ -177,6 +177,11 @@ export interface ModifyGuildIntegrationPayload {
 	expire_grace_period?: number | null;
 	enable_emoticons?: boolean | null;
 }
+
+export interface ListGuildMembersPayload {
+	limit?: number;
+	after?: string;
+}
 // #endregion Guilds
 // #region Users
 export interface ModifyCurrentUserPayload {
